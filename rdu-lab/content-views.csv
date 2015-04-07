@@ -1,0 +1,8 @@
+Name,Count,Label,Organization,Composite,Repositories or Composites,Lifecycle Environments
+Sat-6.1.0 Beta,1,Sat-6_1_0_Beta,Mega Corporation,No,Sat6.1.0-Beta,"Library,Development,Test"
+SAM-6.1 Beta,1,SAM-6_1_Beta,Mega Corporation,No,SAM6.1-Beta,"Library,Development,Test"
+RHEL 7 SCL,1,RHEL_7_SCL,Mega Corporation,No,Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server x86_64 7Server,"Library,Development"
+RHEL 7Server (Full),1,RHEL_7Server__Full_,Mega Corporation,No,"Red Hat Enterprise Linux 7 Server - RH Common RPMs x86_64 7Server,Red Hat Enterprise Linux 7 Server RPMs x86_64 7Server","Library,Development"
+RHEL 7.0 (Minimal),1,RHEL_7_0__Minimal_,Mega Corporation,No,Red Hat Enterprise Linux 7 Server RPMs x86_64 7Server,"Library,Development"
+Satellite 6.1,1,Satellite_6_1,Mega Corporation,Yes,"RHEL 7 SCL,RHEL 7Server (Full),Sat-6.1.0 Beta","Library,Development"
+SAM 6.1,1,SAM_6_1,Mega Corporation,Yes,"RHEL 7 SCL,RHEL 7Server (Full),SAM-6.1 Beta","Library,Development"

@@ -1,0 +1,13 @@
+Name,Count,Organization,Environment,Content View,Host Collections,Virtual,Host,OS,Arch,Sockets,RAM,Cores,SLA,Products,Subscriptions
+hypervisor-alpha,1,Mega Corporation,Library,Default Organization View,"Mega Corp HQ",No,,RHEL 6.4,x86_64,1,4GB,1,Premium,,"""|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+#hypervisor-alpha,1,Mega Corporation,Library,Default Organization View,"Mega Corp HQ",No,,RHEL 6.4,x86_64,1,4GB,1,Premium,,
+hypervisor-beta,1,Mega Corporation,Library,Default Organization View,"Mega Corp HQ",No,,RHEL 6.4,x86_64,1,4GB,1,Premium,,"""|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+hypervisor-gamma,1,Mega Corporation,Library,Default Organization View,"Mega Corp HQ",No,,RHEL 6.4,x86_64,1,4GB,1,Premium,,"""|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+hypervisor-epsilon,1,Mega Corporation,Library,Default Organization View,"Mega Corp HQ",No,,RHEL 6.4,x86_64,1,4GB,1,Premium,,"""|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+alpha-guest-%d,5,Mega Corporation,Library,Default Organization View,"Mega Corp HQ,Accounting",Yes,hypervisor-alpha,RHEL 6.4,x86_64,1,4GB,1,Premium,"69|Red Hat Enterprise Linux Server",
+beta-guest-%d,4,Mega Corporation,Library,Default Organization View,"Mega Corp HQ,Accounting",Yes,hypervisor-beta,RHEL 6.4,x86_64,1,4GB,1,Premium,"69|Red Hat Enterprise Linux Server",
+gamma-guest-%d,4,Mega Corporation,Library,Default Organization View,"Mega Corp HQ,Accounting",Yes,hypervisor-gamma,RHEL 6.4,x86_64,1,4GB,1,Premium,"69|Red Hat Enterprise Linux Server",
+delta-guest-%d,4,Mega Corporation,Library,Default Organization View,"Mega Corp HQ,Accounting",Yes,,RHEL 6.4,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+zeta-guest-%d,4,Mega Corporation,Library,Default Organization View,"Mega Corp HQ,Accounting",Yes,,RHEL 6.4,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+#dhcp129-%03d.megacorp.com,255,Mega Corporation,Library,Default Organization View,"Mega Corp HQ",No,,RHEL 6.4,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server","""|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""

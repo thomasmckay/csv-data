@@ -1,0 +1,3 @@
+Name,Count,Label,Organization,Repository,Repository Type,Repository Url
+Red Hat Enterprise Linux Server,1,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Enterprise Linux 6 Server Kickstart x86_64 6.5,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/6/6.5/x86_64/kickstart
+Red Hat Enterprise Linux Server,1,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Enterprise Linux 6 Server RPMs x86_64 6Server,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/6/6Server/x86_64/os

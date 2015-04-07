@@ -1,0 +1,19 @@
+Name,Count,Resource,Search,Permissions,Organizations,Locations
+View Organization,1,Organization,"name = ""Mega Corporation""","view_organizations",,
+View Content Hosts,1,System,,"view_content_hosts",Mega Corporation,
+View Lifecycle Environments,1,KTEnvironment,"name = Library","view_lifecycle_environments",Mega Corporation,
+View Content Views,1,ContentView,"","view_content_views",Mega Corporation,
+
+# Mega Corporation Admin,1,ActivationKey,"","view_activation_keys,create_activation_keys,edit_activation_keys,destroy_activation_keys",Mega Corporation,
+# Mega Corporation Admin,1,Audit,"",view_audit_logs,,
+# Mega Corporation Admin,1,System,"","view_content_hosts,create_content_hosts,edit_content_hosts,destroy_content_hosts",Mega Corporation,
+# Mega Corporation Admin,1,ContentView,"","view_content_views",Mega Corporation,
+# Mega Corporation Admin,1,Filter,"","view_filters,create_filters,edit_filters,destroy_filters",Mega Corporation,""
+# Mega Corporation Admin,1,KTEnvironment,"","view_lifecycle_environments",Mega Corporation,
+# Mega Corporation Admin,1,Organization,"","delete_manifest,import_manifest,unattach_subscriptions,attach_subscriptions,view_subscriptions,assign_organizations,edit_organizations,view_organizations",,
+# Mega Corporation Admin,1,Product,"","view_products,create_products,edit_products,destroy_products,sync_products",Mega Corporation,
+# Mega Corporation Admin,1,Role,"","view_roles,create_roles,edit_roles,destroy_roles",,
+# Mega Corporation Admin,1,SyncPlan,"","view_sync_plans,create_sync_plans,edit_sync_plans,destroy_sync_plans",Mega Corporation,
+# Mega Corporation Admin,1,User,"","view_users,create_users,edit_users,destroy_users",Mega Corporation,""
+# Mega Corporation Admin,1,Usergroup,"","view_usergroups,create_usergroups,edit_usergroups,destroy_usergroups",,
+# Mega Corporation Admin,1,,"","view_tasks,view_plugins,access_settings,access_dashboard",,

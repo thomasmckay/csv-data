@@ -1,0 +1,8 @@
+Name,Count,Label,Organization,Repository,Repository Type,Repository Url
+Red Hat Software Collections for RHEL Server,1,Red_Hat_Software_Collections__for_RHEL_Server_,Mega Corporation,Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server x86_64 7Server,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/rhscl/1/os
+Red Hat Software Collections for RHEL Server,1,Red_Hat_Software_Collections__for_RHEL_Server_,Mega Corporation,Red Hat Software Collections Source RPMs for Red Hat Enterprise Linux 7 Server x86_64 7Server,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/rhscl/1/source/SRPMS
+SAM6.1-Beta,1,SAM6_1-Beta,Mega Corporation,SAM6.1-Beta,Custom Yum,http://satellite6.lab.eng.rdu2.redhat.com/devel/candidate-trees/SAM/latest-SAM-6.1-RHEL-7/compose/SAM/x86_64/os/
+Red Hat Enterprise Linux Server,1,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Enterprise Linux 7 Server Kickstart x86_64 7.0,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7.0/x86_64/kickstart
+Red Hat Enterprise Linux Server,1,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Enterprise Linux 7 Server - RH Common RPMs x86_64 7Server,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/rh-common/os
+Red Hat Enterprise Linux Server,1,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Enterprise Linux 7 Server RPMs x86_64 7Server,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/os
+Sat6.1.0-Beta,1,Sat6_1_0-Beta,Mega Corporation,Sat6.1.0-Beta,Custom Yum,http://satellite6.lab.eng.rdu2.redhat.com/devel/candidate-trees/Satellite/latest-Satellite-6.1-RHEL-7/compose/Satellite/x86_64/os/

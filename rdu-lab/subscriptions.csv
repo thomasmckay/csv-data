@@ -1,0 +1,7 @@
+Name,Count,Organization,Manifest File,Content Set,Arch,Release
+MegaCorp,1,Mega Corporation,../csv-data/rdu-lab/megacorp.zip,
+Red Hat Software Collections for RHEL Server,1,Mega Corporation,,Red Hat Software Collections RPMs for Red Hat Enterprise Linux 7 Server,x86_64,7Server
+Red Hat Software Collections for RHEL Server,1,Mega Corporation,,Red Hat Software Collections Source RPMs for Red Hat Enterprise Linux 7 Server,x86_64,7Server
+Red Hat Enterprise Linux Server,1,Mega Corporation,,Red Hat Enterprise Linux 7 Server (RPMs),x86_64,7Server
+Red Hat Enterprise Linux Server,1,Mega Corporation,,Red Hat Enterprise Linux 7 Server (Kickstart),x86_64,7.0
+Red Hat Enterprise Linux Server,1,Mega Corporation,,Red Hat Enterprise Linux 7 Server - RH Common (RPMs),x86_64,7Server

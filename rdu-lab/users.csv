@@ -1,0 +1,3 @@
+"Name","Count","First Name","Last Name","Email","Organizations","Locations","Administrator","Roles"
+"thomasmckay-admin","1","Thomas McKay","(Admin)","thomasmckay@redhat.com","Mega Corporation","",Yes,""
+"thomasmckay-user","1","Thomas McKay","(User)","thomasfmckay@gmail.com","Mega Corporation","",No,""

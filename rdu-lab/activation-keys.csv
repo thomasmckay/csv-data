@@ -1,5 +1,5 @@
 Name,Count,Organization,Description,Limit,Environment,Content View,System Groups,Subscriptions
-sam6.1-beta,1,Mega Corporation,,Unlimited,Development,SAM 6.1,"","""1|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"",1|Software Collections and Developer Toolset,1|SAM6.1-Beta"
-rhel7-minimal,1,Mega Corporation,,1,Development,RHEL 7.0 (Minimal),"","""1|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
-rhel7-full,1,Mega Corporation,,Unlimited,Development,RHEL 7Server (Full),"","""1|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
-sat6.1-beta,1,Mega Corporation,,Unlimited,Development,Satellite 6.1,"","1|Software Collections and Developer Toolset,1|Sat6.1.0-Beta,""1|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+sam6.1-beta,1,Mega Corporation,,Unlimited,Development,SAM 6.1,"","""1|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"",1|MCT2883|Software Collections and Developer Toolset,1|Custom|SAM6.1-Beta"
+rhel7-minimal,1,Mega Corporation,,1,Development,RHEL 7.0 (Minimal),"","""1|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+rhel7-full,1,Mega Corporation,,Unlimited,Development,RHEL 7Server (Full),"","""1|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"""
+sat6.1-beta,1,Mega Corporation,,Unlimited,Development,Satellite 6.1,"","1|Custom|Sat6.1.0-Beta,""1|RH0103708|Red Hat Enterprise Linux Server, Premium (8 sockets) (Up to 4 guests)"",1|MCT2883|Software Collections and Developer Toolset"

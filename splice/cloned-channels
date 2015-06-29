@@ -1,0 +1,5 @@
+original_channel_label,original_channel_name,new_channel_label,new_channel_name
+rhel-x86_64-server-6,Red Hat Enterprise Linux Server (v. 6 for 64-bit x86_64),prod-rhel-x86_64-server-6,Production RHEL 6 (v. 6 for 64-bit x86_64)
+rhn-tools-rhel-x86_64-server-6,RHN Tools for RHEL (v. 6 for 64-bit x86_64),prod-rhn-tools-rhel-x86_64-server-6,Production RHN Tools for RHEL (v. 6 for 64-bit x86_64)
+rhel-x86_64-server-optional-6,RHEL Server Optional (v. 6 64-bit x86_64),prod-rhel-x86_64-server-optional-6,Production RHEL Server Optional (v. 6 64-bit x86_64)
+rhel-x86_64-server-6-rhscl-1,Red Hat Software Collections 1 (RHEL 6 Server x86_64),prod-rhel-x86_64-server-6-rhscl-1,Production Red Hat Software Collections 1 (RHEL 6 Server x86_64)

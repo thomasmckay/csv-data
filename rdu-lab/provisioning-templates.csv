@@ -1,0 +1,293 @@
+"Name","Count","Organizations","Locations","Operating Systems","Host Group / Puppet Environment Combinations","Kind","Template"
+"Mega Corporation Kickstart","1","Mega Corporation","","RedHat 7.0,RedHat 6.6,RedHat 6.6","EL7 Development Full - Satellite-6.1|KT_megacorp_Development_Satellite_6_1_67,EL6 Development Full - SAM-1.4|KT_megacorp_Development_SAM_1_4_88","PXELinux","<%#
+# History
+# 2015.04.01 - thomasmckay-admin - cloned from ""Satellite Kickstart Default for RHEL""
+#
+
+kind: provision
+name: Kickstart RHEL default
+oses:
+- RedHat 4
+- RedHat 5
+- RedHat 6
+- RedHat 7
+%>
+<%
+  os_major = @host.operatingsystem.major.to_i
+  # safemode renderer does not support unary negation
+  pm_set = @host.puppetmaster.empty? ? false : true
+  puppet_enabled = pm_set || @host.params['force-puppet']
+  puppet_enabled = false
+%>
+install
+<%= @mediapath %>
+lang en_US.UTF-8
+selinux --enforcing
+keyboard us
+skipx
+network --bootproto <%= @static ? ""static --ip=#{@host.ip} --netmask=#{@host.subnet.mask} --gateway=#{@host.subnet.gateway} --nameserver=#{[@host.subnet.dns_primary,@host.subnet.dns_secondary].reject{|n| n.blank?}.join(',')}"" : 'dhcp' %> --hostname <%= @host %>
+rootpw --iscrypted <%= root_pass %>
+firewall --<%= os_major >= 6 ? 'service=' : '' %>ssh
+authconfig --useshadow --passalgo=sha256 --kickstart
+timezone --utc <%= @host.params['time-zone'] || 'UTC' %>
+
+<% if os_major > 4 -%>
+services --disabled gpm,sendmail,cups,pcmcia,isdn,rawdevices,hpoj,bluetooth,openibd,avahi-daemon,avahi-dnsconfd,hidd,hplip,pcscd
+<% end -%>
+
+bootloader --location=mbr --append=""nofb quiet splash=quiet"" <%= grub_pass %>
+<% if os_major == 5 -%>
+key --skip
+<% end -%>
+
+
+<% if @dynamic -%>
+%include /tmp/diskpart.cfg
+<% else -%>
+<%= @host.diskLayout %>
+<% end -%>
+
+text
+reboot
+
+%packages --ignoremissing
+yum
+dhclient
+ntp
+wget
+ipa-client
+@Base
+<% if puppet_enabled %>
+puppet
+<% end -%>
+%end
+
+<% if @dynamic -%>
+%pre
+<%= @host.diskLayout %>
+%end
+<% end -%>
+
+%post --nochroot
+exec < /dev/tty3 > /dev/tty3
+#changing to VT 3 so that we can see whats going on....
+/usr/bin/chvt 3
+(
+cp -va /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
+/usr/bin/chvt 1
+) 2>&1 | tee /mnt/sysimage/root/install.postnochroot.log
+%end
+
+%post  --log=/root/post.log
+logger ""Starting anaconda <%= @host %> postinstall""
+exec < /dev/tty3 > /dev/tty3
+#changing to VT 3 so that we can see whats going on....
+/usr/bin/chvt 3
+(
+#update local time
+echo ""updating system time""
+/usr/sbin/ntpdate -sub <%= @host.params['ntp-server'] || '0.fedora.pool.ntp.org' %>
+/usr/sbin/hwclock --systohc
+
+<% if os_major == 7 -%>
+rpm -Uvh http://file.bos.redhat.com/jmontleo/ipa-bz1122621/ipa-client-3.3.3-28.1.bz1122621.el7_0.x86_64.rpm http://file.bos.redhat.com/jmontleo/ipa-bz1122621/ipa-admintools-3.3.3-28.1.bz1122621.el7_0.x86_64.rpm http://file.bos.redhat.com/jmontleo/ipa-bz1122621/ipa-python-3.3.3-28.1.bz1122621.el7_0.x86_64.rpm
+<% end -%>
+
+<%= snippet ""megacorp_subscription_manager"" %>
+
+
+<% if @host.info[""parameters""][""realm""] && @host.otp && @host.realm && @host.realm.realm_type == ""Red Hat Identity Management"" -%>
+<%= snippet ""idm_register"" %>
+<% end -%>
+
+# update all the base packages from the updates repository
+yum -t -y -e 0 update
+
+<% if puppet_enabled %>
+# and add the puppet package
+yum -t -y -e 0 install puppet
+
+echo ""Configuring puppet""
+cat > /etc/puppet/puppet.conf << EOF
+<%= snippet 'puppet.conf' %>
+EOF
+
+# Setup puppet to run on system reboot
+/sbin/chkconfig --level 345 puppet on
+
+/usr/bin/puppet agent --config /etc/puppet/puppet.conf -o --tags no_such_tag <%= @host.puppetmaster.blank? ? '' : ""--server #{@host.puppetmaster}"" %> --no-daemonize
+<% end -%>
+chkconfig rhel-domainname off
+sync
+
+# Inform the build system that we are done.
+echo ""Informing Foreman that we are built""
+wget -q -O /dev/null --no-check-certificate <%= foreman_url %>
+# Sleeping an hour for debug
+) 2>&1 | tee /root/install.post.log
+exit 0
+
+%end
+
+
+"
+"megacorp_subscription_manager","1","Mega Corporation","","","","snippet","# History
+# 2015.04.01 - thomasmckay-admin -cloned from subscription_manager_registration_fix
+#
+<% if @host.params['kt_org'] && @host.params['kt_activation_keys'] %>
+# add subscription manager
+yum -t -y -e 0 install subscription-manager
+rpm -ivh <%= subscription_manager_configuration_url %>
+sed -i 's|/katello/api|/rhsm|g' /etc/rhsm/rhsm.conf
+echo ""Registering the System""
+subscription-manager register --org=""<%= @host.params['kt_org']%>"" --name=""<%= @host.name %>"" --activationkey=""<%= @host.params['kt_activation_keys'] %>""
+
+<% if @host.content_source %>
+  subscription-manager config --rhsm.baseurl=https://<%= @host.content_source.hostname %>/pulp/repos
+<% end %>
+
+echo ""Installing Katello Agent""
+yum -t -y -e 0 install katello-agent
+chkconfig goferd on
+service goferd start
+<% end %>
+"
+"Satellite Kickstart Default for RHEL","1","Mega Corporation","","RedHat 5.10,RedHat 6.5,RedHat 7.0,RedHat 5.11,RedHat 6.6,RedHat 6.6,RedHat 7.1","","provision","<%#
+kind: provision
+name: Kickstart RHEL default
+oses:
+- RedHat 4
+- RedHat 5
+- RedHat 6
+- RedHat 7
+%>
+<%
+  os_major = @host.operatingsystem.major.to_i
+  # safemode renderer does not support unary negation
+  pm_set = @host.puppetmaster.empty? ? false : true
+  puppet_enabled = pm_set || @host.params['force-puppet']
+%>
+install
+<%= @mediapath %>
+lang en_US.UTF-8
+selinux --enforcing
+keyboard us
+skipx
+network --bootproto <%= @static ? ""static --ip=#{@host.ip} --netmask=#{@host.subnet.mask} --gateway=#{@host.subnet.gateway} --nameserver=#{[@host.subnet.dns_primary,@host.subnet.dns_secondary].reject{|n| n.blank?}.join(',')}"" : 'dhcp' %> --hostname <%= @host %>
+rootpw --iscrypted <%= root_pass %>
+firewall --<%= os_major >= 6 ? 'service=' : '' %>ssh
+authconfig --useshadow --passalgo=sha256 --kickstart
+timezone --utc <%= @host.params['time-zone'] || 'UTC' %>
+
+<% if os_major > 4 -%>
+services --disabled gpm,sendmail,cups,pcmcia,isdn,rawdevices,hpoj,bluetooth,openibd,avahi-daemon,avahi-dnsconfd,hidd,hplip,pcscd
+<% end -%>
+
+bootloader --location=mbr --append=""nofb quiet splash=quiet"" <%= grub_pass %>
+<% if os_major == 5 -%>
+key --skip
+<% end -%>
+
+
+<% if @dynamic -%>
+%include /tmp/diskpart.cfg
+<% else -%>
+<%= @host.diskLayout %>
+<% end -%>
+
+text
+reboot
+
+%packages --ignoremissing
+yum
+dhclient
+ntp
+wget
+ipa-client
+@Base
+<% if puppet_enabled %>
+puppet
+<% end -%>
+%end
+
+<% if @dynamic -%>
+%pre
+<%= @host.diskLayout %>
+%end
+<% end -%>
+
+%post --nochroot
+exec < /dev/tty3 > /dev/tty3
+#changing to VT 3 so that we can see whats going on....
+/usr/bin/chvt 3
+(
+cp -va /etc/resolv.conf /mnt/sysimage/etc/resolv.conf
+/usr/bin/chvt 1
+) 2>&1 | tee /mnt/sysimage/root/install.postnochroot.log
+%end
+
+%post  --log=/root/post.log
+logger ""Starting anaconda <%= @host %> postinstall""
+exec < /dev/tty3 > /dev/tty3
+#changing to VT 3 so that we can see whats going on....
+/usr/bin/chvt 3
+(
+#update local time
+echo ""updating system time""
+/usr/sbin/ntpdate -sub <%= @host.params['ntp-server'] || '0.fedora.pool.ntp.org' %>
+/usr/sbin/hwclock --systohc
+
+<% if os_major == 7 -%>
+rpm -Uvh http://file.bos.redhat.com/jmontleo/ipa-bz1122621/ipa-client-3.3.3-28.1.bz1122621.el7_0.x86_64.rpm http://file.bos.redhat.com/jmontleo/ipa-bz1122621/ipa-admintools-3.3.3-28.1.bz1122621.el7_0.x86_64.rpm http://file.bos.redhat.com/jmontleo/ipa-bz1122621/ipa-python-3.3.3-28.1.bz1122621.el7_0.x86_64.rpm
+<% end -%>
+
+<%= snippet ""subscription_manager_registration_fix"" %>
+subscription-manager attach --pool=8a88ec8148e71f1e0148eac1dc840337
+subscription-manager repos --disable=*
+<% if os_major == 6 -%>
+subscription-manager repos --enable rhel-6-server-rpms
+subscription-manager repos --enable rhel-6-server-rh-common-rpms
+subscription-manager repos --enable rhel-6-server-rh-common-beta-rpms
+<% end -%>
+<% if os_major == 7 -%>
+subscription-manager repos --enable rhel-7-server-rpms
+subscription-manager repos --enable rhel-7-server-rh-common-rpms
+subscription-manager repos --enable rhel-7-server-rh-common-beta-rpms
+<% end -%>
+
+
+<% if @host.info[""parameters""][""realm""] && @host.otp && @host.realm && @host.realm.realm_type == ""Red Hat Identity Management"" -%>
+<%= snippet ""idm_register"" %>
+<% end -%>
+
+# update all the base packages from the updates repository
+yum -t -y -e 0 update
+
+<% if puppet_enabled %>
+# and add the puppet package
+yum -t -y -e 0 install puppet
+
+echo ""Configuring puppet""
+cat > /etc/puppet/puppet.conf << EOF
+<%= snippet 'puppet.conf' %>
+EOF
+
+# Setup puppet to run on system reboot
+/sbin/chkconfig --level 345 puppet on
+
+/usr/bin/puppet agent --config /etc/puppet/puppet.conf -o --tags no_such_tag <%= @host.puppetmaster.blank? ? '' : ""--server #{@host.puppetmaster}"" %> --no-daemonize
+<% end -%>
+chkconfig rhel-domainname off
+sync
+
+# Inform the build system that we are done.
+echo ""Informing Foreman that we are built""
+wget -q -O /dev/null --no-check-certificate <%= foreman_url %>
+# Sleeping an hour for debug
+) 2>&1 | tee /root/install.post.log
+exit 0
+
+%end
+
+
+"

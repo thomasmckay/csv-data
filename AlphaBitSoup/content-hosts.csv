@@ -1,0 +1,16 @@
+Name,Count,Organization,Environment,Content View,Host Collections,Virtual,Host,OS,Arch,Sockets,RAM,Cores,SLA,Products,Subscriptions
+hypervisor-alpha,1,Alpha Bit Soup,Library,Default Organization View,"α alpha,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+alpha-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,α alpha,Yes,hypervisor-alpha,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-beta,1,Alpha Bit Soup,Library,Default Organization View,"β beta,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+#beta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,β beta,Yes,hypervisor-beta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+beta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,β beta,Yes,,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-gamma,1,Alpha Bit Soup,Library,Default Organization View,"γ gamma,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+gamma-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,γ gamma,Yes,hypervisor-gamma,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-delta,1,Alpha Bit Soup,Library,Default Organization View,"δ delta,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+delta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,δ delta,Yes,hypervisor-delta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-epsilon,1,Alpha Bit Soup,Library,Default Organization View,"ε epsilon,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+epsilon-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ε epsilon,Yes,,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",

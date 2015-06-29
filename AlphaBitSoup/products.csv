@@ -1,0 +1,4 @@
+Name,Count,Label,Organization,Repository,Repository Type,Repository Url
+Satellite 6.1.0,1,Satellite_6_1_0,Alpha Bit Soup,RHEL 7Server Satellite 6.1.0,Custom Yum,http://pulp-read.dist.prod.ext.phx2.redhat.com/content/beta/rhel/server/7/x86_64/satellite/6/os/
+katello-client 6Server,1,katello-client_6Server,Alpha Bit Soup,6Server x86_64,Custom Yum,https://fedorapeople.org/groups/katello/releases/yum/nightly/client/RHEL/6Server/x86_64/
+katello-client,1,katello-client,Alpha Bit Soup,katello-client-x86_64,Custom Yum,https://fedorapeople.org/groups/katello/releases/yum/nightly/client/RHEL/7Server/x86_64/

@@ -1,0 +1,5 @@
+Name,Count,Organization,Manifest File,Content Set,Arch,Release
+# Quantity  SKU      Description
+# 200       RH00008  Red Hat Enterprise Linux Server with Smart Management, Premium (Physical or Virtual Nodes)
+# 20        RH00001  Red Hat Enterprise Linux for Virtual Datacenters, Premium
+AlphaBitSoup,1,Alpha Bit Soup,/home/thomasmckay/code/csv-data/AlphaBitSoup/manifest.zip,

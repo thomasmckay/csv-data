@@ -1,0 +1,2 @@
+Name,Count,Organization,Location,Environment,Operating System,Architecture,MAC Address,Domain,Partition Table
+alpha-guest-%d.alphabitsoup.com,5,Alpha Bit Soup,Amorgos,Athena,RHEL 6.6,x86_64,"02:FE:B5:E0:70:%02x",alphabitsoup.com,Πελοπόννησος

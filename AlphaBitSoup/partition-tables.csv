@@ -1,0 +1,6 @@
+"Name","Count","OS Family","Operating Systems","Layout"
+"Πελοπόννησος","1","Redhat",RHEL 6.6,"zerombr
+clearpart --all --initlabel
+part /boot --fstype=ext4 --size=500
+part / --fstype=ext4 --size=1024 --grow
+part swap  --recommended"

@@ -13,4 +13,61 @@ hypervisor-delta,1,Alpha Bit Soup,Library,Default Organization View,"δ delta,Hy
 delta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,δ delta,Yes,hypervisor-delta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
 
 hypervisor-epsilon,1,Alpha Bit Soup,Library,Default Organization View,"ε epsilon,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
-epsilon-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ε epsilon,Yes,,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+epsilon-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ε epsilon,Yes,hypervisor-epsilon,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-zeta,1,Alpha Bit Soup,Library,Default Organization View,"ζ zeta,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+zeta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ζ zeta,Yes,hypervisor-zeta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-eta,1,Alpha Bit Soup,Library,Default Organization View,"η eta,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+eta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,η eta,Yes,hypervisor-eta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-theta,1,Alpha Bit Soup,Library,Default Organization View,"θ theta,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+theta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,θ theta,Yes,hypervisor-theta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-iota,1,Alpha Bit Soup,Library,Default Organization View,"ι iota,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+iota-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ι iota,Yes,hypervisor-iota,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-kappa,1,Alpha Bit Soup,Library,Default Organization View,"κ kappa,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+kappa-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,κ kappa,Yes,hypervisor-kappa,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-lambda,1,Alpha Bit Soup,Library,Default Organization View,"λ lambda,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+lambda-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,λ lambda,Yes,hypervisor-lambda,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-mu,1,Alpha Bit Soup,Library,Default Organization View,"μ mu,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+mu-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,μ mu,Yes,hypervisor-mu,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-nu,1,Alpha Bit Soup,Library,Default Organization View,"ν nu,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+nu-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ν nu,Yes,hypervisor-nu,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-xi,1,Alpha Bit Soup,Library,Default Organization View,"ξ xi,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+xi-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ξ xi,Yes,hypervisor-xi,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-omicron,1,Alpha Bit Soup,Library,Default Organization View,"ο omicron,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+omicron-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ο omicron,Yes,hypervisor-omicron,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-pi,1,Alpha Bit Soup,Library,Default Organization View,"π pi,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+pi-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,π pi,Yes,hypervisor-pi,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-rho,1,Alpha Bit Soup,Library,Default Organization View,"ρ rho,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+rho-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ρ rho,Yes,hypervisor-rho,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-sigma,1,Alpha Bit Soup,Library,Default Organization View,"σ sigma,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+sigma-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,σ sigma,Yes,hypervisor-sigma,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-tau,1,Alpha Bit Soup,Library,Default Organization View,"τ tau,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+tau-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,τ tau,Yes,hypervisor-tau,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-upsilon,1,Alpha Bit Soup,Library,Default Organization View,"υ upsilon,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+upsilon-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,υ upsilon,Yes,hypervisor-upsilon,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-phi,1,Alpha Bit Soup,Library,Default Organization View,"φ phi,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+phi-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,φ phi,Yes,hypervisor-phi,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-chi,1,Alpha Bit Soup,Library,Default Organization View,"χ chi,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+chi-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,χ chi,Yes,hypervisor-chi,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-psi,1,Alpha Bit Soup,Library,Default Organization View,"ψ psi,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+psi-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ψ psi,Yes,hypervisor-psi,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+
+hypervisor-omega,1,Alpha Bit Soup,Library,Default Organization View,"ω omega,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+omega-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,ω omega,Yes,hypervisor-omega,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",

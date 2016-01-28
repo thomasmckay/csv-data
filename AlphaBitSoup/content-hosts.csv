@@ -1,6 +1,6 @@
 Name,Count,Organization,Environment,Content View,Host Collections,Virtual,Host,OS,Arch,Sockets,RAM,Cores,SLA,Products,Subscriptions
 hypervisor-alpha,1,Alpha Bit Soup,Library,Default Organization View,"α alpha,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
-alpha-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,α alpha,Yes,hypervisor-alpha,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",
+alpha-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,α alpha,Yes,hypervisor-alpha,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server","""1|RH00003|Red Hat Enterprise Linux Server, Premium (Physical or Virtual Nodes)"""
 
 hypervisor-beta,1,Alpha Bit Soup,Library,Default Organization View,"β beta,Hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
 #beta-guest-%d,5,Alpha Bit Soup,Library,Default Organization View,β beta,Yes,hypervisor-beta,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",

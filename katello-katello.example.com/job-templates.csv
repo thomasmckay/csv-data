@@ -1,0 +1,4 @@
+"Name","Organizations","Locations","Job Category","Provider","Snippet","Template"
+"hammer - thomasmckay/hammer hub.docker.com","Mega Corporation","","thomasmckay/hammer hub.docker.com","Ssh","No","SERVER_IP=`/sbin/ifconfig eth0 | grep -w 'inet' | cut -d\  -f10`
+docker run -t --rm thomasmckay/hammer hammer --server http://${SERVER_IP}:3000 --username admin --password changeme <%= input(""command"") %>
+"

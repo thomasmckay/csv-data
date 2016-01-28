@@ -1,0 +1,2 @@
+Name,Label,Organization,Composite,Repositories or Composites,Lifecycle Environments
+virt-who from sat-tools,virt-who_from_sat-tools,"Green Hat, Inc.",No,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,"Library,Baseline"

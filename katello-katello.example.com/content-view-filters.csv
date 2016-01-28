@@ -1,0 +1,2 @@
+Name,Content View,Organization,Type,Description,Repositories,Rules
+virt-who,virt-who from sat-tools,"Green Hat, Inc.",Include Packages,,"","virt-who|all,libvirt-python|all,m2crypto|all,python-rhsm|>|1.10.10,python-suds|all,systemd|all,systemd-python|all"

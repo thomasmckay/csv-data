@@ -1,0 +1,2 @@
+Name,Label,Organization,Repository,Repository Type,Repository Url
+Red Hat Enterprise Linux Server,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/sat-tools/6.1/os

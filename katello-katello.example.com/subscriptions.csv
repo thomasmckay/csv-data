@@ -1,0 +1,6 @@
+Name,Organization,Manifest File,Content Set,Arch,Release
+MegaCorp,Mega Corporation,/home/thomasmckay/code/csv-data/katello-katello.example.com/manifest-megacorp.zip,
+Red Hat Enterprise Linux Server,Mega Corporation,,Red Hat Satellite Tools 6.1 (for RHEL 6 Server) (RPMs),x86_64,
+Red Hat Enterprise Linux Server,Mega Corporation,,Red Hat Satellite Tools 6.1 (for RHEL 7 Server) (RPMs),x86_64,
+GreenHat,"Green Hat, Inc.",/home/thomasmckay/code/csv-data/katello-katello.example.com/manifest-greenhat.zip
+Red Hat Enterprise Linux Server,"Green Hat, Inc.",,Red Hat Satellite Tools 6.1 (for RHEL 7 Server) (RPMs),x86_64,

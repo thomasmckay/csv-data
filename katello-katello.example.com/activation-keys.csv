@@ -1,0 +1,3 @@
+Name,Organization,Description,Limit,Environment,Content View,Host Collections,Service Level,Release Version,Auto-Attach,Subscriptions
+katello.example.com,Mega Corporation,,1,Library,Default Organization View,,,,Yes,
+green-hypervisor,"Green Hat, Inc.",,1,Library,Default Organization View,hypervisors,,,Yes,|MCT0428|Red Hat Satellite

@@ -1,0 +1,2 @@
+Name,Count,Registry,Repository:Tag,Compute Resource,Attach I/O,Entry Point,Command
+alphabits-lifecycle-environments,1,,thomasmckay/katello-hammer:latest,Self-Serve-Docker,"tty,stdout,stderr","",hammer --server http://xxxlocalhost:3000 --username admin --password changeme csv lifecycle-environments --verbose --file https://raw.githubusercontent.com/thomasmckay/csv-data/master/AlphaBitSoup/lifecycle-environments.csv

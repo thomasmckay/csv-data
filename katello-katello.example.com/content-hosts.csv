@@ -1,0 +1,3 @@
+Name,Count,Organization,Environment,Content View,Host Collections,Virtual,Host,OS,Arch,Sockets,RAM,Cores,SLA,Products,Subscriptions
+hypervisor-green,1,"Green Hat, Inc.",Library,Default Organization View,"hypervisors",No,,RHEL 7Server,x86_64,1,4 GB,1,,,""
+green-guest-%d,5,"Green Hat, Inc.",Library,Default Organization View,,Yes,hypervisor-green,RHEL 7Server,x86_64,1,4GB,1,,"69|Red Hat Enterprise Linux Server",

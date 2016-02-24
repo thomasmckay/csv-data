@@ -1,4 +1,17 @@
-"Name","Organizations","Locations","Job Category","Provider","Snippet","Template"
-"hammer - thomasmckay/hammer hub.docker.com","Mega Corporation","","thomasmckay/hammer hub.docker.com","Ssh","No","SERVER_IP=`/sbin/ifconfig eth0 | grep -w 'inet' | cut -d\  -f10`
-docker run -t --rm thomasmckay/hammer hammer --server http://${SERVER_IP}:3000 --username admin --password changeme <%= input(""command"") %>
+"Name","Organizations","Locations","Description","Job Category","Provider","Snippet","Template","Input:Name","Input:Description","Input:Required","Input:Type","Input:Parameters"
+"Export CDN","Mega Corporation","","","Miscellaneous","SSH","No","docker run -t --rm thomasmckay/hammer:nightly hammer \
+    --server https://<%= @host.ip %> \
+    --username <%= input('username') %> --password <%= input('password') %> \
+    content-view version export \
+        --organization ""Mega Corporation"" \
+        --content-view ""cdn.megacorp.com"" \
+        --version <%= input('version') %>
+
+rm -f /var/www/html/pub/cdn.megacorp.com-latest
+
+ln -s /var/www/html/pub/megacorp-cdn_megacorp-v<%= input('version') %>/megacorp/content_views/cdn_megacorp/<%= input('version') %>\
+      /var/www/html/pub/cdn.megacorp.com-latest
 "
+"Export CDN","","","","","","","","username","hammer username","Yes","user",""
+"Export CDN","","","","","","","","password","hammer password","Yes","user",""
+"Export CDN","","","","","","","","version","Content View Version (eg. 1.0)","Yes","user",""

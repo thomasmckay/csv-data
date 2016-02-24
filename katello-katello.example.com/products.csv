@@ -1,2 +1,16 @@
-Name,Label,Organization,Repository,Repository Type,Repository Url
-Red Hat Enterprise Linux Server,Red_Hat_Enterprise_Linux_Server,Mega Corporation,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/sat-tools/6.1/os
+Name,Label,Organization,Description,Repository,Repository Type,Repository Url
+Red Hat Enterprise Linux Server,Red_Hat_Enterprise_Linux_Server,Mega Corporation,,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,Red Hat Yum,https://cdn.redhat.com/content/dist/rhel/server/7/7Server/x86_64/sat-tools/6.1/os
+Puppet Modules,puppet-modules,Mega Corporation,Example puppet product,Puppet Forge,Custom Puppet,https://forge.puppetlabs.com/
+Puppet Modules,puppet-modules,Mega Corporation,"
+### For creating local motd module ###
+sudo mkdir /var/www/html/pub/puppet-modules
+sudo chmod a+rw /var/www/html/pub/puppet-modules
+git clone https://github.com/puppetlabs/puppetlabs-motd.git
+cd puppetlabs-motd
+sed -i.bak s/""puppetlabs""/""thomasmckay""/g metadata.json
+sed -i.bak s/""1.3.0""/""1.3.1""/g metadata.json
+sudo pulp-puppet-module-builder --output-dir /var/www/html/pub/puppet-modules .
+",Puppet MOTD,Custom Puppet,http://katello/pub/puppet-modules/
+Katello Nightly,katello-nightly,Mega Corporation,Katello Nightly RPMs,Katello Nightly,Custom Yum,https://fedorapeople.org/groups/katello/releases/yum/nightly/katello/RHEL/7Server/x86_64/
+Katello Nightly,katello-nightly,Mega Corporation,,Pulp Community Releases,Custom Yum,https://fedorapeople.org/groups/katello/releases/yum/nightly/pulp/RHEL/7Server/x86_64/
+Katello Nightly,katello-nightly,Mega Corporation,,Candlepin: an open source entitlement management system.,Custom Yum,https://fedorapeople.org/groups/katello/releases/yum/nightly/candlepin/RHEL/7Server/x86_64/

@@ -1,3 +1,3 @@
 "Name","Organizations","Locations","URL","Lifecycle Environments"
-"katello-katello.example.com","Default Organization,Mega Corporation,""Green Hat, Inc."",""Blue Hat, Inc.""","Default Location","http://katello-katello.example.com:8000"
+"katello.example.com","Default Organization,Mega Corporation,""Green Hat, Inc."",""Blue Hat, Inc.""","Default Location","https://katello.example.com:8000",
 

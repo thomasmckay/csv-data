@@ -1,2 +1,6 @@
 Name,Label,Organization,Composite,Repositories or Composites,Lifecycle Environments
-virt-who from sat-tools,virt-who_from_sat-tools,"Green Hat, Inc.",No,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,"Library,Baseline"
+virt-who,virt-who_from_sat-tools,"Green Hat, Inc.",No,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,"Library,Baseline"
+Puppet Modules,Puppet_Modules,Mega Corporation,No,"","Library,Baseline"
+Katello Nightly,Katello_Nightly,Mega Corporation,No,"Katello Nightly,Pulp Community Releases,Candlepin: an open source entitlement management system.","Library,Baseline"
+katello.example.com,katello_example_com,Mega Corporation,Yes,"Puppet Modules,Katello Nightly","Library,Baseline"
+cdn.megacorp.com,cdn_megacorp,No,Red Hat Satellite Tools 6.1 for RHEL 7 Server RPMs x86_64,"Library,Baseline"

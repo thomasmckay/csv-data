@@ -1,0 +1,6 @@
+"Name","First Name","Last Name","Email","Organizations","Locations","Administrator","Roles"
+thomasmckay-admin,Thomas McKay,(Admin),thomasmckay@redhat.com,Mega Corporation,,Yes,
+thomasmckay,Thomas McKay,(Non-Admin),thomasmckay@redhat.com,Mega Corporation,,No,
+thomasmckay-red,Thomas McKay,(Red Hat),thomasmckay@redhat.com,"""Red Hat, Inc.""",,Yes,
+thomasmckay-green,Thomas McKay,(Green Hat),thomasmckay@redhat.com,"""Green Hat, Inc.""",,Yes,
+thomasmckay-blue,Thomas McKay,(Blue Hat),thomasmckay@redhat.com,"""Blue Hat, Inc.""",,Yes,

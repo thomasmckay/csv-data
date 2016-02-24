@@ -1,0 +1,2 @@
+"Name","Organizations","Locations","Description","Provider","URL"
+"katello.example.com","Mega Corporation","","","Docker","unix:///var/run/docker.sock"

@@ -1,0 +1,3 @@
+Name,Count,Resource,Search,Permissions,Organizations,Locations
+Content View Publisher,1,ContentView,"","view_content_views,create_content_views,edit_content_views,destroy_content_views,publish_content_views",Mega Corporation,
+Content View Publisher,1,KTEnvironment,"","view_lifecycle_environments",Mega Corporation,

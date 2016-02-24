@@ -1,0 +1,5 @@
+Name,Count,Organization,Manifest File,Content Set,Arch,Release
+MegaCorp,1,Mega Corporation,../csv-data/sat6.0-megacorp/manifest.zip,
+Red Hat Enterprise Linux Server,1,Mega Corporation,,Red Hat Enterprise Linux 7 Server (RPMs),x86_64,7Server
+Red Hat Enterprise Linux Server,1,Mega Corporation,,Red Hat Enterprise Linux 7 Server (Kickstart),x86_64,7.0
+
